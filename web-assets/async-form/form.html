@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Send Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <form action="http://localhost/estudos/avulso/self-form-send/api.php" method="post" autocomplete="off" data-form>
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" required>
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" required>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem"></textarea>
+        <button type="submit" data-button>Enviar</button>
+    </form>
+</body>
+</html>

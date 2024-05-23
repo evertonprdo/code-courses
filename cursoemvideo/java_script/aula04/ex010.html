@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <form autocomplete="off">
+        <h1>Exercicios</h1>
+
+        <fieldset>
+            <legend>Verificar Nacionalidade</legend>
+
+            <label for="txtnac">Nacionalidade</label>
+            <input type="text" name="txtnac" id="txtnac">
+            
+            <input type="button" value="verificar" id="bttn" onclick="nacionali()">
+            <div id="nacio"></div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Sistema de Multa</legend>
+            <label for="txtvel">Velocidade do carro:</label>
+            <input type="number" name="txtvel" id="txtvel">
+            
+            <input type="button" value="Verificar" onclick="calcular()">
+            <div id="res"></div>
+        </fieldset>
+    </form>
+
+    <script>
+        function calcular() {
+            
+            var txtv = document.getElementById('txtvel')
+            var vel = Number(txtv.value)
+            
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}KM/h</strong></p>`
+            
+            if (vel > 60) {
+                res.innerHTML += `<p>Você está <strong>multado</strong> por execesso de velocidade</p>`
+            }
+            
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+        }
+        
+        function nacionali() {
+            var txtn = document.querySelector('input#txtnac').value
+            var nac = document.querySelector('div#nacio')
+            var txtc = txtn.charAt(0).toLocaleUpperCase() + txtn.slice(1).toLocaleLowerCase()
+
+            nac.innerHTML = `<p>Você que nasceu em ${txtc}</p>`
+            if (txtc == 'Brasil') {
+                nac.innerHTML += `<p>Você é Brasileiro</p>`
+            } else {
+                nac.innerHTML += `<p>Você é estrangeira</p>`
+            }
+        }
+        const ultimo = document.querySelector('input#txtnac')
+        
+            ultimo.addEventListener('keydown', function(enter) { 
+                if (enter.key === 'Enter'){
+                enter.preventDefault();
+                document.querySelector('input#bttn').click();
+            }
+        })
+        
+    </script>
+</body>
+</html>

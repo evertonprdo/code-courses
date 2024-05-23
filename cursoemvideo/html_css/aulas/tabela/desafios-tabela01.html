@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            width: 400px;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        caption {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Desafios Mesclagem de Tabela</h1>
+    
+    <table>
+        <caption>Tabela 1</caption>
+        <tr>
+            <td>1
+            <td>2
+            <td rowspan="2">3
+            <td>4
+        <tr>
+            <td>5
+            <td>6
+            <td>7
+        <tr>
+            <td colspan="3">8
+            <td>9
+        <tr>
+            <td rowspan="2">10
+            <td colspan="2">11
+            <td>12
+        <tr>
+            <td>13
+            <td>14
+            <td>15
+    </table>
+    <hr>
+    <table>
+        <caption>Tabela 2</caption>
+        <tr>
+            <td colspan="4">A
+            <td rowspan="4">B               
+        <tr>
+            <td rowspan="4">C
+            <td>D
+            <td>E
+            <td>F                   
+        <tr>
+            <td>G
+            <td>H
+            <td>I                   
+        <tr>
+            <td>J
+            <td>L
+            <td>M                   
+        <tr>
+            <td colspan="4">N                     
+    </table>
+</body>
+</html>

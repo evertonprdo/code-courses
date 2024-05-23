@@ -1,0 +1,49 @@
+@charset 'UTF-8';
+
+body {
+    background-color: rgb(102, 188, 209);
+    font: normal 20px Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    
+    width: 600px;
+    padding: 10px;
+
+    background-color: white;
+    border-radius: 10px;
+    
+    
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.233);
+}
+footer {
+    color: white;
+    text-align: center;
+}
+
+div#content {
+    display: flex;
+    text-align: center;
+}
+
+div#res {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+div#res > img {
+    border-radius: 50%;
+    height: 400px;
+}
