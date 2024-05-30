@@ -1,5 +1,5 @@
-class Conta {
-    protected numero:number;
+abstract class Conta {
+    private readonly numero:number;
     protected titular:string;
     private saldo_c:number
 
@@ -41,11 +41,21 @@ class Conta {
 }
 
 //------------------------------------------------------------------------------------------------------------------------
-class ContaPF extends Conta {
+interface Tributos {
+    baseCalculo:number;
+    CalcularTributos(taxa:number):number;
+}
+
+class ContaPF extends Conta implements Tributos{
     cpf:number;
+    readonly baseCalculo:number = 10;
     constructor(cpf:number, titular:string) {
         super(titular);
         this.cpf = cpf;
+    }
+
+    CalcularTributos(taxa: number): number {
+        return taxa*this.baseCalculo;
     }
 
     info() {
